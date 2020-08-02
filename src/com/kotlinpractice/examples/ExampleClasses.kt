@@ -159,7 +159,6 @@ class LambdaExpressionsExample : IPracticeExample {
         get() = "Lambda Expressions"
     override val exampleExplanation: String?
         get() = "Using lambda expressions to filter and map collections."
-
     override fun executeExample(): String? {
         var result = ""
         val fruits = listOf("banana", "avocado", "apple", "kiwifruit")
