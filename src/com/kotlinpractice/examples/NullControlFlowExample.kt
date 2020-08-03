@@ -24,7 +24,7 @@ class NullControlFlowExample : IPracticeExample {
         fun notNullDependentCodeBlock(stringParameter: String?): String {
             return stringParameter?.let {
                 "This block got executed cus \"$it\" is not null"
-            } ?: "DefaultString cus the string is null."
+            } ?: "DefaultString cus the string is null"
         }
 
         resultString += "\n${notNullDependentCodeBlock(nullString)}"
