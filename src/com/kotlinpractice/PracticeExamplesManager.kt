@@ -26,6 +26,7 @@ class PracticeExamplesManager {
         exampleList.add(ConstructorAndInitExample())
         exampleList.add(ExtensionFunctionsExample())
         exampleList.add(NullControlFlowExample())
+        exampleList.add(WithExample())
     }
 }
 
