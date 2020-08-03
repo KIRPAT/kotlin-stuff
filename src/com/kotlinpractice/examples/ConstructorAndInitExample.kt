@@ -1,11 +1,17 @@
 package com.kotlinpractice.examples
 
-/*
-* This file contains example classes
-* and functions for various example classes.
-*
-* No order.
-* */
+class ConstructorAndInitExample : IPracticeExample {
+    override val exampleTitle: String? = null
+    override val exampleExplanation: String? = null
+    override fun executeExample(): String {
+        println("- ConstructorInitExample -")
+        println("Tests priorities of class constructor and initializer.")
+        println("Result:")
+        val regularConstructorExample = RegularConstructorExample(25 )
+        val primaryConstructorExampleObject = PrimaryConstructorExample(12 )
+        return ""
+    }
+}
 
 class RegularConstructorExample {
     private val classMemberValueA: Int?
@@ -16,7 +22,7 @@ class RegularConstructorExample {
         this.classMemVariableB = primaryConstructorVariableB
         println(
                 "${::classMemberValueA.name} -> $classMemberValueA" +
-                "\n ${::classMemVariableB.name} -> $classMemVariableB"
+                        "\n ${::classMemVariableB.name} -> $classMemVariableB"
         )
     }
 
@@ -38,7 +44,7 @@ class PrimaryConstructorExample(primaryConstructorValueA: Int, val primaryConstr
         println("Second \"init\"")
         println(
                 "${::primaryConstructorVariableB.name} -> $primaryConstructorVariableB" +
-                "\n ${::classMemberValueA.name} -> $classMemberValueA"
+                        "\n ${::classMemberValueA.name} -> $classMemberValueA"
         )
     }
 }

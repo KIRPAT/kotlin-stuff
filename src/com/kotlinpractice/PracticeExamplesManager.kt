@@ -22,7 +22,10 @@ class PracticeExamplesManager {
         exampleList.add(WhenExample())
         exampleList.add(IterationsAndRangeExample())
         exampleList.add(LambdaExpressionsExample())
-        exampleList.add(ConstructorInitExample())
+        exampleList.add(MapExample())
+        exampleList.add(ConstructorAndInitExample())
+        exampleList.add(ExtensionFunctionsExample())
+        exampleList.add(NullControlFlowExample())
     }
 }
 
