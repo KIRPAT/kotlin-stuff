@@ -1,17 +1,12 @@
 package com.kotlinpractice.examples
 
 class MapExample : IPracticeExample {
-    override val exampleTitle: String?
-        get() = "Map Examples"
-    override val exampleExplanation: String?
-        get() = "Examples with Maps"
-
     private fun readOnlyMap(): String {
         val readOnlyMap: Map<String, Any> = mapOf("a" to 1, "b" to 2)
         var resultString = ""
 
-        for ((k,v) in readOnlyMap){
-           resultString += "$k-$v "
+        for ((k, v) in readOnlyMap) {
+            resultString += "$k-$v "
         }
 
         return resultString
@@ -23,12 +18,18 @@ class MapExample : IPracticeExample {
 
         mutableMap["c"] = 3
 
-        for ((k,v) in mutableMap){
+        for ((k, v) in mutableMap) {
             resultString += "$k-$v "
         }
 
         return resultString
     }
+
+    override val exampleTitle: String?
+        get() = "Map Examples"
+
+    override val exampleExplanation: String?
+        get() = "Examples with Maps"
 
     override fun executeExample(): String? {
         var resultString = ""

@@ -2,13 +2,15 @@ package com.kotlinpractice.examples
 
 class ConstructorAndInitExample : IPracticeExample {
     override val exampleTitle: String? = null
+
     override val exampleExplanation: String? = null
+
     override fun executeExample(): String {
         println("- ConstructorInitExample -")
         println("Tests priorities of class constructor and initializer.")
         println("Result:")
-        val regularConstructorExample = RegularConstructorExample(25 )
-        val primaryConstructorExampleObject = PrimaryConstructorExample(12 )
+        val regularConstructorExample = RegularConstructorExample(25)
+        val primaryConstructorExampleObject = PrimaryConstructorExample(12)
         return ""
     }
 }
@@ -17,12 +19,12 @@ class RegularConstructorExample {
     private val classMemberValueA: Int?
     private var classMemVariableB: String?
 
-    constructor(primaryConstructorValueA: Int, primaryConstructorVariableB: String = "Hello World"){
+    constructor(primaryConstructorValueA: Int, primaryConstructorVariableB: String = "Hello World") {
         this.classMemberValueA = primaryConstructorValueA
         this.classMemVariableB = primaryConstructorVariableB
         println(
-                "${::classMemberValueA.name} -> $classMemberValueA" +
-                        "\n ${::classMemVariableB.name} -> $classMemVariableB"
+            "${::classMemberValueA.name} -> $classMemberValueA" +
+                    "\n ${::classMemVariableB.name} -> $classMemVariableB"
         )
     }
 
@@ -32,7 +34,10 @@ class RegularConstructorExample {
     }
 }
 
-class PrimaryConstructorExample(primaryConstructorValueA: Int, val primaryConstructorVariableB: String = "Hello World") {
+class PrimaryConstructorExample(
+    primaryConstructorValueA: Int,
+    val primaryConstructorVariableB: String = "Hello World"
+) {
     private val classMemberValueA: Int = primaryConstructorValueA
 
     init {
@@ -43,8 +48,8 @@ class PrimaryConstructorExample(primaryConstructorValueA: Int, val primaryConstr
     init {
         println("Second \"init\"")
         println(
-                "${::primaryConstructorVariableB.name} -> $primaryConstructorVariableB" +
-                        "\n ${::classMemberValueA.name} -> $classMemberValueA"
+            "${::primaryConstructorVariableB.name} -> $primaryConstructorVariableB" +
+                    "\n ${::classMemberValueA.name} -> $classMemberValueA"
         )
     }
 }

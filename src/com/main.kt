@@ -1,13 +1,19 @@
 package com
 
-import com.kotlinpractice.PracticeExamplesManager
+import com.kotlinpractice.PracticeExamplesWriter
+import com.kotlinpractice.aquariumshop.AquariumCommandLineInterface
+import com.kotlinpractice.aquariumshop.AquariumShopManagementSystem
+import com.kotlinpractice.clearConsole
 
 fun main(args: Array<String>) {
-    if (args.isEmpty()) {
-        val practiceExampleManager = PracticeExamplesManager()
-        practiceExampleManager.printExampleArray()
-    } else {
-        println("Fish Tank Incoming. Soon TM.")
+    when {
+        args.isEmpty() -> PracticeExamplesWriter.printExampleArray()
+        else -> aquariumShopLoop()
     }
 }
 
+fun aquariumShopLoop() {
+    while (AquariumShopManagementSystem.isShopOpen) {
+        AquariumCommandLineInterface.selectAquariumShopAction()
+    }
+}

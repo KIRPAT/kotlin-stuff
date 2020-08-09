@@ -1,6 +1,6 @@
 package com.kotlinpractice.examples
 
-class WithExample: IPracticeExample {
+class WithExample : IPracticeExample {
     override val exampleTitle: String?
         get() = "With Example"
     override val exampleExplanation: String?
@@ -11,7 +11,7 @@ class WithExample: IPracticeExample {
 
         localCounter.apply { counterVariable = 5 }
 
-        with(localCounter){
+        with(localCounter) {
             for (i in 1..5)
                 increaseCounterVariable()
         }

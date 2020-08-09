@@ -1,10 +1,6 @@
 package com.kotlinpractice.examples
 
 class IterationsAndRangeExample : IPracticeExample {
-    override val exampleTitle: String?
-        get() = "Iterations and Range Example"
-    override val exampleExplanation: String?
-        get() = "Various range examples."
 
     private fun inRangeCheckExamples(): String {
         var result: String = ""
@@ -68,6 +64,12 @@ class IterationsAndRangeExample : IPracticeExample {
 
         return result
     }
+
+    override val exampleTitle: String?
+        get() = "Iterations and Range Example"
+
+    override val exampleExplanation: String?
+        get() = "Various range examples."
 
     override fun executeExample(): String? {
         var result: String = ""

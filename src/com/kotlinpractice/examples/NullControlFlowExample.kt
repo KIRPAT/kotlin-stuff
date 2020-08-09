@@ -16,7 +16,7 @@ class NullControlFlowExample : IPracticeExample {
         resultString += "\n${localMutableListValue?.size ?: "empty"}"
 
         val localMutableMapValue: MutableMap<String, String> = mutableMapOf("a" to "A")
-        resultString += "\n${localMutableMapValue["b"]?: IllegalStateException("Key is missing.")}"
+        resultString += "\n${localMutableMapValue["b"] ?: IllegalStateException("Key is missing.")}"
 
         val nullString: String? = null
         val notNullString: String? = "Hello World"

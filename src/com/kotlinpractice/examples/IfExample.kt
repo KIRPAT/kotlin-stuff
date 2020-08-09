@@ -1,6 +1,6 @@
 package com.kotlinpractice.examples
 
-class IfExample: IPracticeExample {
+class IfExample : IPracticeExample {
     override val exampleTitle: String = "If Else Example"
 
     override val exampleExplanation: String
@@ -11,10 +11,10 @@ class IfExample: IPracticeExample {
 
         if (5 > 3) result += "\n5 is bigger than 3"
 
-        if (5 > 3) {
-            result += "\n5 is bigger than 3"
+        result += if (5 > 3) {
+            "\n5 is bigger than 3"
         } else {
-            result += "\n5 is smaller than 3, which is not true"
+            "\n5 is smaller than 3, which is not true"
         }
 
         //If-Else as an expression. Turnerry

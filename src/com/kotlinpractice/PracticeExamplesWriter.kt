@@ -2,10 +2,10 @@ package com.kotlinpractice
 
 import com.kotlinpractice.examples.*
 
-class PracticeExamplesManager {
+object PracticeExamplesWriter {
     private val exampleList = mutableListOf<IPracticeExample>()
 
-    constructor() {
+    init {
         this.registerExamplesToExampleList()
     }
 
