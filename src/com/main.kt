@@ -1,19 +1,13 @@
 package com
 
 import com.kotlinpractice.PracticeExamplesWriter
-import com.kotlinpractice.aquariumshop.AquariumCommandLineInterface
-import com.kotlinpractice.aquariumshop.AquariumShopManagementSystem
-import com.kotlinpractice.clearConsole
+import com.kotlinpractice.aquariumshop.cli.AquariumShopCli
+import com.kotlinpractice.aquariumshop.cli.CliRunner
 
 fun main(args: Array<String>) {
     when {
         args.isEmpty() -> PracticeExamplesWriter.printExampleArray()
-        else -> aquariumShopLoop()
+        else -> CliRunner.cliLoop()
     }
 }
 
-fun aquariumShopLoop() {
-    while (AquariumShopManagementSystem.isShopOpen) {
-        AquariumCommandLineInterface.selectAquariumShopAction()
-    }
-}
